@@ -1,0 +1,68 @@
+/* Valeurs générales */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #5271ff;
+}
+
+/* VALEURS MAIN */
+
+
+
+.titre-calculo{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #5271ff;
+    font-size: 6em;
+}
+
+.sous-titre-calculo{
+    color: #5271ff;
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.texte-calculo{
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    width: 30%;
+    font-size: 1.3em;
+}
+
+.lien-calculo{
+    font-family: "Kanit", sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #5271ff;
+    color: white;
+    font-size: 2em;
+    border-radius: 20px;
+    width: 300px;
+    margin: 25px 0 40px;
+}
+
+.sous-titre-calculo, .titre-calculo, .texte-calculo ,.lien-calculo {
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.qcm-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/fond--qcm.png');
+    height: 100vh; 
+    background: url('/images/fond--qcm.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

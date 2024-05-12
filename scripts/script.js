@@ -1,0 +1,1 @@
+let btnDemarrer = document.getElementById('btn-demarrer')
