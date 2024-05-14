@@ -1,86 +1,79 @@
-/* Valeurs générales */
-
-*{
+/* Général */
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #5271ff;
-}
-
-/* Titre et sous-titre */
-
-header{
+body {
+    background-color: #F8F8F8;
+    font-family: 'Kanit', sans-serif;
     display: flex;
-    display: block;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 15em;
 }
 
-h1{
-    font-family: "Poetsen One", sans-serif;
+/* En-tête */
+
+h1 {
+    font-family: 'Poetsen One', sans-serif;
     font-weight: bold;
     font-style: italic;
-    color: white;
-    font-size: 5.2em;
+    color: #1E2A4A;
+    font-size: 60px;
+    margin-bottom: 10px;
 }
 
-h2{
-    font-family: "Kanit", sans-serif;
-    color: white;
+h3 {
     font-weight: bold;
-    font-size: 2.8em;
-}
-
-h3{
-    font-family: "Kanit", sans-serif;
-    color: white;
-    font-weight: bold;
-    font-size: 2.3em;
+    color: #1E2A4A;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
 /* Proposition */
-
-main{
-    display: flex;
-    display: block;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
+main {
+    padding-top: 50px;
 }
 
-.mot-liste{
-    font-family: "Kanit", sans-serif;
-    display: block;
-    font-size: 2.3em;
-    margin: 30px;
+.mot-liste {
+    font-size: 20px;
+    margin: 30px 0;
 }
 
-.input-chiffre-class{
-    font-family: "Kanit", sans-serif;
+.input-chiffre-class {
     padding: 8px;
-    font-size: 1.1em;
-    border-radius: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #1E2A4A;
 }
 
-.bouton-input{
-    font-family: "Kanit", sans-serif;
+.bouton-input {
     padding: 8px;
-    font-size: 1.1em;
-    border-radius: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #1E2A4A;
+    color: #fff;
+    margin-bottom: 50px;
+    border: none;
+    cursor: pointer;
 }
 
-.lien-menu{
-    font-family: "Kanit", sans-serif;
+.lien-menu {
     font-weight: bold;
     padding: 10px;
-    background-color: white;
-    color: #5271ff;
-    font-size: 1.5em;
+    background-color: #1E2A4A;
+    color: #fff;
+    font-size: 20px;
     border-radius: 20px;
     width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
 }

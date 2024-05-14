@@ -9,6 +9,7 @@ let score = 0;
 // Je déclare mes fonctions qui demandent notre calcul et de taper le résultat attendu
 
 function premierCalcul() {
+    inputChiffre.innerHTML =""
     titreQCM.innerText = "Combien font : 5 + 2"
     btnInput.addEventListener('click',function(event) {
         event.preventDefault();
@@ -22,6 +23,7 @@ function premierCalcul() {
 };
 
 function secondCalcul() {
+    inputChiffre.innerHTML =""
     titreQCM.innerText = "Combien font : 6 % 2"
     btnInput.addEventListener('click',function(event) {
         event.preventDefault();
@@ -35,6 +37,7 @@ function secondCalcul() {
 };
 
 function troisiemeCalcul() {
+    inputChiffre.innerHTML =""
     titreQCM.innerText = "Combien font : 3 x 3"
     btnInput.addEventListener('click',function(event) {
         event.preventDefault();
@@ -50,7 +53,7 @@ function troisiemeCalcul() {
 
 
 function affichageResultat(){
-//je vide le formulaire, et le rempli avec mon lien retour au menu 
+//je vide le formulaire, et le rempli avec mon lien retour au menu
     formInput.innerHTML = "";
     let lienMenu = document.createElement('a')
     lienMenu.innerText = "Retour au Menu"
