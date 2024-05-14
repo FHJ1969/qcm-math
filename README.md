@@ -1,3 +1,3 @@
-1. faire le code js de la page index
-
-2. Commencer le code du qcm débutant
+1. Ajouter un chronomètre pour le test 
+2. Améliorer l'ui du formulaire du qcm
+3. Ajouter des effets sonnores aux clics,  pendant le quiz et après 
