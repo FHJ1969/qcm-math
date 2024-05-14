@@ -5,52 +5,47 @@ let inputChiffre = document.getElementById('input-chiffre');
 let btnInput = document.getElementById('btn-input');
 let formInput = document.getElementById('form-input')
 let score = 0;
+let currentCalcul = 1;
 
 // Je déclare mes fonctions qui demandent notre calcul et de taper le résultat attendu
 
-function premierCalcul() {
-    inputChiffre.value =""
-    titreQCM.innerText = "Combien font : 5 + 2"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
+function calcul(event) {
+    event.preventDefault();
+    if (currentCalcul === 1) {
         if (inputChiffre.value === "7") {
             score++;
-            secondCalcul()
-        } else {
-            secondCalcul()
         }
-    })
+        currentCalcul = 2;
+        secondCalcul();
+    } else if (currentCalcul === 2) {
+        if (inputChiffre.value === "3") {
+            score++;
+        }
+        currentCalcul = 3;
+        troisiemeCalcul();
+    } else if (currentCalcul === 3) {
+        if (inputChiffre.value === "9") {
+            score++;
+        }
+        currentCalcul = 4;
+        affichageResultat();
+    }
+    inputChiffre.value = "";
+}
+
+function premierCalcul() {
+    titreQCM.innerText = "Combien font : 5 + 2"
 };
 
 function secondCalcul() {
-    inputChiffre.value =""
     titreQCM.innerText = "Combien font : 6 ÷ 2"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
-        if (inputChiffre.value === "3") {
-            score++;
-            troisiemeCalcul()
-        } else {
-            troisiemeCalcul()
-        }
-    })
 };
 
 function troisiemeCalcul() {
-    inputChiffre.value =""
     titreQCM.innerText = "Combien font : 3 x 3"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
-        if (inputChiffre.value === "9") {
-            score++;
-            affichageResultat()
-        } else {
-            affichageResultat()
-        }
-    })
 };
 
-
+//Affichage du résultat
 
 function affichageResultat(){
 //je vide le formulaire, et le rempli avec mon lien retour au menu
@@ -79,6 +74,7 @@ function affichageResultat(){
 }
 
 // J'appel la fonction premierCalcul
+btnInput.addEventListener('click', calcul);
 premierCalcul();
 
 

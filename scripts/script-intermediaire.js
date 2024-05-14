@@ -5,47 +5,47 @@ let inputChiffre = document.getElementById('input-chiffre');
 let btnInput = document.getElementById('btn-input');
 let formInput = document.getElementById('form-input')
 let score = 0;
+let currentCalcul = 1;
 
 // Je déclare mes fonctions qui demandent notre calcul et de taper le résultat attendu
 
-function premierCalcul() {
-    titreQCM.innerText = "Combien font : 15(2+7)"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
+function calcul(event) {
+    event.preventDefault();
+    if (currentCalcul === 1) {
         if (inputChiffre.value === "135") {
             score++;
-            secondCalcul()
-        } else {
-            secondCalcul()
         }
-    })
+        currentCalcul = 2;
+        secondCalcul();
+    } else if (currentCalcul === 2) {
+        if (inputChiffre.value === "21") {
+            score++;
+        }
+        currentCalcul = 3;
+        troisiemeCalcul();
+    } else if (currentCalcul === 3) {
+        if (inputChiffre.value === "108") {
+            score++;
+        }
+        currentCalcul = 4;
+        affichageResultat();
+    }
+    inputChiffre.value = "";
+}
+
+function premierCalcul() {
+    titreQCM.innerText = "Combien font : 15(2+7)"
 };
 
 function secondCalcul() {
     titreQCM.innerText = "Combien font : 9 ÷ 3 x 7"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
-        if (inputChiffre.value === "21") {
-            score++;
-            troisiemeCalcul()
-        } else {
-            troisiemeCalcul()
-        }
-    })
 };
 
 function troisiemeCalcul() {
     titreQCM.innerText = "Combien font : 3 x 3 x 3 x 4"
-    btnInput.addEventListener('click',function(event) {
-        event.preventDefault();
-        if (inputChiffre.value === "108") {
-            score++;
-            affichageResultat()
-        } else {
-            affichageResultat()
-        }
-    })
 };
+
+
 
 
 
