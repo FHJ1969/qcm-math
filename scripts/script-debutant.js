@@ -50,8 +50,13 @@ function troisiemeCalcul() {
 
 
 function affichageResultat(){
-//j'efface le formulaire pour éviter le bug dans le comptage du score
+//je vide le formulaire, et le rempli avec mon lien retour au menu 
     formInput.innerHTML = "";
+    let lienMenu = document.createElement('a')
+    lienMenu.innerText = "Retour au Menu"
+    lienMenu.href = "index.html"
+    lienMenu.classList.add('lien-menu')
+    formInput.appendChild(lienMenu)
 //Je change l'affichage du titre selon le score obtenu
     titreQCM.innerText = "Vous avez obtenu un score de " + score + " sur 3,"
     switch (score) {

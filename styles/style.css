@@ -54,7 +54,7 @@ body{
     margin: 5px 10px;
 }
 
-.lien-calculo{
+a{
     font-weight: bold;
     padding: 10px;
     background-color: #5271ff;
@@ -62,10 +62,11 @@ body{
     font-size: 1.5em;
     border-radius: 20px;
     width: 300px;
-    margin: 25px 0 20px;
+    margin: 15px;
 }
 
 .texte-calculo{
+    margin-top: 30px;
     font-weight: 300;
     width: 25%;
     font-size: 1.1em;
