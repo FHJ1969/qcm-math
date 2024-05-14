@@ -22,7 +22,7 @@ function premierCalcul() {
 };
 
 function secondCalcul() {
-    titreQCM.innerText = "Combien font : 9 % 3 x 7"
+    titreQCM.innerText = "Combien font : 9 ÷ 3 x 7"
     btnInput.addEventListener('click',function(event) {
         event.preventDefault();
         if (inputChiffre.value === "21") {
