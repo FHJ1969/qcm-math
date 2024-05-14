@@ -1,9 +1,18 @@
-// Je récupère ici les élements HTML lien et boutons 
+// Je récupère mon bouton lien HTML
+let btnDemarrer = document.getElementById('btn-demarrer');
 
-let lienDemarrer = document.getElementById('lien-demarrer')
-let btnDebutant = document.getElementById('btn-debutant')
-let btnIntermediaire = document.getElementById('btn-intermediaire')
+//et je vérifie ici quand si le lien est pressé
+//et qu'au moins un des deux choix (btn-debutant/btn-intermediaire) soit pressé le bouton démarrer mène à une page quiz
 
-// Je vérifie ici quand le lien est pressé, qu'au moins un des deux choix (btn-debutant/btn-intermediaire) soit pressé
+btnDemarrer.addEventListener('click', function(event) {
+    event.preventDefault(); 
 
-lienDemarrer.addEventListener()
+    let btnDebutant = document.getElementById('btn-debutant').checked;
+    let btnIntermediaire = document.getElementById('btn-intermediaire').checked;
+
+    if (btnDebutant === true) {
+        btnDemarrer.link = 'html/quiz-debutant.html';
+    } else if (btnIntermediaire === true) {
+        btnDemarrer.link = 'tml/quiz-intermediaire.html';
+    };
+});

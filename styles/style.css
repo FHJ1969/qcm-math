@@ -26,7 +26,7 @@ body{
 
 /* Titres et sous-titres du main */
 
-.sous-titre-calculo, .titre-calculo, .texte-calculo ,.lien-calculo {
+.sous-titre-calculo, .titre-calculo, .texte-calculo ,.lien-calculo, .btn-niveau {
     display: block;
     flex-direction: row;
     justify-content: center;
